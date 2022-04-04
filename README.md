@@ -2,9 +2,9 @@
 
 <pre>
   •TIC TAC TOE by using AI Techniques
-    Algorithm: MiniMax (Alpha-Beta).
+    AI Algorithm: MiniMax (Alpha-Beta).
     Used Language: JAVA
+    GID taken for the GAME:
 </pre>
-PIC:
 ![](TICTACTOE.gif)
 
