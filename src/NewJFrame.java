@@ -280,10 +280,11 @@ public class NewJFrame extends javax.swing.JFrame implements ActionListener {
             JOptionPane.showMessageDialog(NewJFrame.this, "draw! :)".toUpperCase());
             gameFinished = true;
         }
-
+        
         if (gameFinished) {
             xoBoard.clearBoard();
             this.clearButtons();
+            this.playerTurn = true;
         }
         return gameFinished;
     }
@@ -348,7 +349,6 @@ public class NewJFrame extends javax.swing.JFrame implements ActionListener {
                     if (!this.gameChecker(this.xoBoard.xoStateScore())) {
                         AI_minimaxAlphaBeta(xoBoard);
                     }
-                    this.playerTurn = !this.playerTurn;
                 }
             } else if (e.getSource() == jButton2) {
                 if (this.jButton2.getText().equals("")) {
@@ -357,7 +357,6 @@ public class NewJFrame extends javax.swing.JFrame implements ActionListener {
                     this.xoBoard.setIndexMatrix(0, 1, 'X');
                     if (!this.gameChecker(this.xoBoard.xoStateScore())) {
                         AI_minimaxAlphaBeta(xoBoard);
-                        this.playerTurn = !this.playerTurn;
                     }
                 }
             } else if (e.getSource() == jButton3) {
@@ -367,9 +366,7 @@ public class NewJFrame extends javax.swing.JFrame implements ActionListener {
                     this.xoBoard.setIndexMatrix(0, 2, 'X');
                     if (!this.gameChecker(this.xoBoard.xoStateScore())) {
                         AI_minimaxAlphaBeta(xoBoard);
-                        this.playerTurn = !this.playerTurn;
                     }
-
                 }
             } else if (e.getSource() == jButton4) {
                 if (this.jButton4.getText().equals("")) {
@@ -378,7 +375,6 @@ public class NewJFrame extends javax.swing.JFrame implements ActionListener {
                     this.xoBoard.setIndexMatrix(1, 0, 'X');
                     if (!this.gameChecker(this.xoBoard.xoStateScore())) {
                         AI_minimaxAlphaBeta(xoBoard);
-                        this.playerTurn = !this.playerTurn;
                     }
 
                 }
@@ -389,7 +385,6 @@ public class NewJFrame extends javax.swing.JFrame implements ActionListener {
                     this.xoBoard.setIndexMatrix(1, 1, 'X');
                     if (!this.gameChecker(this.xoBoard.xoStateScore())) {
                         AI_minimaxAlphaBeta(xoBoard);
-                        this.playerTurn = !this.playerTurn;
                     }
                 }
             } else if (e.getSource() == jButton6) {
@@ -399,7 +394,6 @@ public class NewJFrame extends javax.swing.JFrame implements ActionListener {
                     this.xoBoard.setIndexMatrix(1, 2, 'X');
                     if (!this.gameChecker(this.xoBoard.xoStateScore())) {
                         AI_minimaxAlphaBeta(xoBoard);
-                        this.playerTurn = !this.playerTurn;
                     }
                 }
             } else if (e.getSource() == jButton7) {
@@ -409,7 +403,6 @@ public class NewJFrame extends javax.swing.JFrame implements ActionListener {
                     this.xoBoard.setIndexMatrix(2, 0, 'X');
                     if (!this.gameChecker(this.xoBoard.xoStateScore())) {
                         AI_minimaxAlphaBeta(xoBoard);
-                        this.playerTurn = !this.playerTurn;
                     }
                 }
             } else if (e.getSource() == jButton8) {
@@ -418,7 +411,6 @@ public class NewJFrame extends javax.swing.JFrame implements ActionListener {
                     this.xoBoard.setIndexMatrix(2, 1, 'X');
                     if (!this.gameChecker(this.xoBoard.xoStateScore())) {
                         AI_minimaxAlphaBeta(xoBoard);
-                        this.playerTurn = !this.playerTurn;
                     }
                 }
             } else {
@@ -427,7 +419,6 @@ public class NewJFrame extends javax.swing.JFrame implements ActionListener {
                     this.xoBoard.setIndexMatrix(2, 2, 'X');
                     if (!this.gameChecker(this.xoBoard.xoStateScore())) {
                         AI_minimaxAlphaBeta(xoBoard);
-                        this.playerTurn = !this.playerTurn;
                     }
                 }
             }
