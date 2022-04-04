@@ -4,7 +4,7 @@
   •TIC TAC TOE by using AI Techniques
     AI Algorithm: MiniMax (Alpha-Beta).
     Used Language: JAVA
-    GID taken for the GAME:
+    GIF Picture taken for the GAME:
 </pre>
 ![](TICTACTOE.gif)
 
